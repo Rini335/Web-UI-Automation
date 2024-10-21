@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite-prod">
+    <listeners>
+        <listener class-name="GenericUtilities.SuitListener"></listener>
+    </listeners>
+
+    <!-- Move parameters to suite level -->
+    <parameter name="baseUrl" value="https://app.dev.zoko.io/"/>
+    <parameter name="username" value="rin@zoko.io"/>
+    <parameter name="password" value="Rinizoko1!"/>
+
+    <test name="test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="Login.Login"/>
+
+            <!-- <class name="Apps.Broadcast"/> -->
+
+        </classes>
+    </test>
+</suite> <!-- Suite -->
